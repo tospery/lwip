@@ -7,6 +7,7 @@
 //
 
 #import "LWIPAppDelegate.h"
+#import <lwip.h>
 
 @implementation LWIPAppDelegate
 

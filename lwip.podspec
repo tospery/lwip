@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'lwip'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'A short description of lwip.'
 
 # This description is used to generate tags and improve search results.
@@ -30,14 +30,12 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'lwip/**/*'
-  s.header_dir = 'lwip/include'
-  
-  # s.resource_bundles = {
-  #   'lwip' => ['lwip/Assets/*.png']
-  # }
+  s.source_files = 'include/**/*.h'
+  s.vendored_libraries = 'lwip/lib/*.a'
 
+  # s.header_dir = 'lwip/include'
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+
 end
