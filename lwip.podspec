@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'lwip'
-  s.version          = '0.0.2'
+  s.version          = '0.0.3'
   s.summary          = 'A short description of lwip.'
 
 # This description is used to generate tags and improve search results.
@@ -30,8 +30,8 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'lwip/include/**/*.h'
-  s.vendored_libraries = 'lwip/lib/*.a'
+  s.source_files = 'lwip/include/**/*'
+  s.vendored_libraries = 'lwip/liblwip.a'
 
   # s.header_dir = 'lwip/include'
   # s.public_header_files = 'Pod/Classes/**/*.h'
