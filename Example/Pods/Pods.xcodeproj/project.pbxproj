@@ -1,0 +1,1023 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		002C5F1E3EAE17A0D2ED5DB5F4811568 /* sockets.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FB49B1CE5F31B9B781D19DD0B31062E /* sockets.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		084C87365C2BF9B9EAA17A32C408CCB4 /* ip_addr.h in Headers */ = {isa = PBXBuildFile; fileRef = 57068E51B4C92C187497BB29DE149A43 /* ip_addr.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1191235EEF07A1C9671EE15446E89730 /* Pods-lwip_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D59318610F8CED2846AD6182F92046 /* Pods-lwip_Tests-dummy.m */; };
+		13914E915A3C3034566041ADC7370A86 /* lwipopts.h in Headers */ = {isa = PBXBuildFile; fileRef = 356DDFB396919BB8FA75596C8E43D5A3 /* lwipopts.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		176E5A1A0A1F4B40C2EB55F3CAD41724 /* memp.h in Headers */ = {isa = PBXBuildFile; fileRef = C55EA38698061D285642AF529644F921 /* memp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A854E233EB684B7D213A5D4FCABC1E9 /* arch.h in Headers */ = {isa = PBXBuildFile; fileRef = 38CF7BE0FC4953D97FA1333C6C8A4361 /* arch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2463D816208EC94FFA84A586B989989A /* perf.h in Headers */ = {isa = PBXBuildFile; fileRef = 60F85E4D2E4BF734ED1F4A51728A3B7B /* perf.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		269B25C35AD847C4369FC23F4DD753FC /* snmp_structs.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F35DD638D1490C57B17CFBE7EE89E25 /* snmp_structs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2A1D92B778C9F9F9FC3ADD6A62299544 /* init.h in Headers */ = {isa = PBXBuildFile; fileRef = E4B72B0499D1F29F63584FE14B962CFE /* init.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F512E48E27A35DD867D0E13302F6022 /* raw.h in Headers */ = {isa = PBXBuildFile; fileRef = 32A9D1C698076555C15CBB256402CE35 /* raw.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30CACB849DB9622B42A604A6E72A34EC /* autoip.h in Headers */ = {isa = PBXBuildFile; fileRef = 262A7658E754777BDB7D6E0B7FA0B413 /* autoip.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		312A4CF4DD77008D4C81A471B96F6A48 /* sys_arch.h in Headers */ = {isa = PBXBuildFile; fileRef = D4888FB76C63702184ABB3C4F704329E /* sys_arch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32276E6ED89F60639814F9521C3AA92B /* inet_chksum.h in Headers */ = {isa = PBXBuildFile; fileRef = 349C94633E79F0B6A1308D32D3B285B2 /* inet_chksum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		373A1B0A1FDA42BB9B7D68FDAECDD53E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		37F1B63AE2EB36018EA857FE5E12AFD2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		389DF5D9D11F1A185259BF752FC8A84C /* tcp_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = C8ED26C81FF10853DF82CD7643B6EBE8 /* tcp_impl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38BD6DB4935BD018AC2C3C31D5FF3966 /* slipif.h in Headers */ = {isa = PBXBuildFile; fileRef = F03B3C3DF4535C9E7A10E358100CAA81 /* slipif.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A2965B4754B83ED86E66480F277242F /* dns.h in Headers */ = {isa = PBXBuildFile; fileRef = B8EB6321669948279BC285F1FC10E48A /* dns.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A2BDDE5E7FACB8D44874FB93752D807 /* sio.h in Headers */ = {isa = PBXBuildFile; fileRef = 27255CA2DE5B198AE16B38A70A4E3CCD /* sio.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		44834D13A58ADCD77BD377A1BEAA24EF /* mem.h in Headers */ = {isa = PBXBuildFile; fileRef = CC580EDF523EDF318BD68EE46AFEF86D /* mem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		466937F85CA05EDC360C31D39B9995A1 /* netif.h in Headers */ = {isa = PBXBuildFile; fileRef = 25543A0A16B8EE4D47817333B9605A01 /* netif.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5192E2BE11DA386A6470FC0ADD872215 /* lwip-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A96357F0CB73D1B45E21248E52B6C915 /* lwip-dummy.m */; };
+		5365A9C0FBDCEC0CB46282693A65CC1D /* netdb.h in Headers */ = {isa = PBXBuildFile; fileRef = F80717A05EDDFC798143DB85568CC8AD /* netdb.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		597B109C09F4616969B204E9B4812A92 /* memp_std.h in Headers */ = {isa = PBXBuildFile; fileRef = 98DCB0966505231066174FB3BA7A4136 /* memp_std.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AC76CDF48D18AB6A9191F170379F653 /* Pods-lwip_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 70C013B6D0185656DC0308AAB67EBE18 /* Pods-lwip_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5CE70A23E36EE3F0E758B3773B8A3BBE /* sys.h in Headers */ = {isa = PBXBuildFile; fileRef = 070750B0817DAFC966701A660398C3EE /* sys.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		681672172ABD111C25335987C2BF308A /* ip.h in Headers */ = {isa = PBXBuildFile; fileRef = C51E08EB17FA2ED0D459692061E1E7D8 /* ip.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		68F73EDD6266CCC3FF46769BAD15D21D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		77D9B9420CBF8AC1F9B1B3C950744672 /* err.h in Headers */ = {isa = PBXBuildFile; fileRef = FC4C9BA7391B91B7EFC57D41A2CAEE8D /* err.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7A52BC4512CD5B83E24B92963FA03705 /* snmp_asn1.h in Headers */ = {isa = PBXBuildFile; fileRef = 5213EB43A62E0DDCD72D6DC3E500EE6C /* snmp_asn1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		832F72227062219AE61108823F9B65FA /* def.h in Headers */ = {isa = PBXBuildFile; fileRef = 616FF0517A5E0A3E0DA841013DD22325 /* def.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B085F52D4DBD008D980B3B918C593C3 /* snmp_msg.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ED2837E8DE4603C05115BBF73A48C03 /* snmp_msg.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B18EC78B0C6244B116AB1C3E1A2784E /* inet.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CDDB7AC004780B7CFE2891688DEA0EE /* inet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8CC54E43F4EA85B7E9C833CA6219C77B /* etharp.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A3A2EE5F574A08E24227A3E885B4B10 /* etharp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		95B3D2F6FC0F6F40B79E8E170CD4767D /* liblwip.a in Sources */ = {isa = PBXBuildFile; fileRef = C18EF76360E6708B84949565D1EB0E9A /* liblwip.a */; };
+		96D8C22695C92EFBE635C84FA7636E6A /* Pods-lwip_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB9483E7CE025AEDFA41E671561A70B /* Pods-lwip_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9D7F7DD10707295B544D26AF11D94AD4 /* debug.h in Headers */ = {isa = PBXBuildFile; fileRef = 5076558302291058585445B0333DCDEB /* debug.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A01C17E67474819E5E7EBF9DFACF02E9 /* opt.h in Headers */ = {isa = PBXBuildFile; fileRef = 28AEB2E22E4306A544EE84BCCD4F8A8C /* opt.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A140A217F16A851EE747443D7B16BA51 /* compat.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A4629ECF23A36B35551ECD1EAEC0E08 /* compat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A145A54B3B3C3C62B4175DE270806845 /* netifapi.h in Headers */ = {isa = PBXBuildFile; fileRef = E3990DE0BD1B25AF60A8E47AED8EE54D /* netifapi.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A17A10F7483AE7B889B5148DDAF8BED7 /* pbuf.h in Headers */ = {isa = PBXBuildFile; fileRef = 359ED4960E3B281D1E7A6D09DF560D05 /* pbuf.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A8118825A491470BABB8C2B92EC10366 /* tcp.h in Headers */ = {isa = PBXBuildFile; fileRef = D97A8FBC7B04BD7C20E829223421C979 /* tcp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A96549EE46F455D905162A67585D56C0 /* api_msg.h in Headers */ = {isa = PBXBuildFile; fileRef = 762DA3D3721BE6333A2283DB7737F6F1 /* api_msg.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE0E0FFBECE064962F7291DA299F0CEB /* module.modulemap in Sources */ = {isa = PBXBuildFile; fileRef = 1CFE8A92F83041B9BDC8E42DA3460990 /* module.modulemap */; };
+		AF0EB3466E5EFD79B267DACF99CF96DC /* igmp.h in Headers */ = {isa = PBXBuildFile; fileRef = D4F03810F92ACCD5C5DD1608838D0644 /* igmp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B1E1533B5BFF593436ABAD5DE168235F /* icmp.h in Headers */ = {isa = PBXBuildFile; fileRef = 345D19746335E93E0DC7035B77746734 /* icmp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B2A913FDDEEEE885550CFFD6870C4DED /* snmp.h in Headers */ = {isa = PBXBuildFile; fileRef = 72AA5ABDBCE354A01A57772A3CA18F5C /* snmp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3C3C4FBA8B3247284D7A8387478F4A9 /* api.h in Headers */ = {isa = PBXBuildFile; fileRef = D91D0C0E2330C5D6CE27165B835F92E6 /* api.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B9CD734F089D9C11B5FB66E3348969FC /* ppp_oe.h in Headers */ = {isa = PBXBuildFile; fileRef = BB238F4BDAFCA5F630B7D031E65B6AAC /* ppp_oe.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BA9D35E13AC5DCE698655BE339743B1C /* ip_frag.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F79FC2D06DA0CDE8E2CBDFFB4EB6A97 /* ip_frag.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C0D8C4FDF06EC0DEBA37102CD745C5A4 /* lwip.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EC005E011D3B1C7960F2438C2B02B07 /* lwip.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9FAB35AF39F07A62B67D4D08A8B5CAC /* tcpip.h in Headers */ = {isa = PBXBuildFile; fileRef = A3F074E44A1CB0DB07D3109B87B889C2 /* tcpip.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB1E84AF02C3F6ED1BD810C62DCC965B /* Pods-lwip_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6D0B95F05F7FB0D079043AB6DDA1F6 /* Pods-lwip_Example-dummy.m */; };
+		CF80EA9303D85571798786969A16AE78 /* netbuf.h in Headers */ = {isa = PBXBuildFile; fileRef = 1343C0AF22365FD354C4B5672D2292F9 /* netbuf.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC6D44DE7E5C469BFD48B3C5E9CC87B3 /* timers.h in Headers */ = {isa = PBXBuildFile; fileRef = 42748876B3D322DD8E20F1C6CD1025C4 /* timers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E912AE7DF0F8303C0D6BCF965C8115A7 /* udp.h in Headers */ = {isa = PBXBuildFile; fileRef = FF15257DB3CE89470CCE9FF44D187595 /* udp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA00ADAB9E7922A1B90713B8CF81EB20 /* cc.h in Headers */ = {isa = PBXBuildFile; fileRef = 17E5AD9FBA5AC4C335B51E10749B8ECA /* cc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EBF765679F9D1B3B10D6464A1A3AF235 /* stats.h in Headers */ = {isa = PBXBuildFile; fileRef = 219B1612A02625D5B5B88AD32AA5209B /* stats.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F5E5CA4E39370C417132231547A065A6 /* lwip-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C056A639B63EEB8BEA687AD579BF88EB /* lwip-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F62BBA8EA7CC3902482B36B81B210F2B /* dhcp.h in Headers */ = {isa = PBXBuildFile; fileRef = C8ABD266E0F47C3D49587FB6E4E498B7 /* dhcp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		56C310C5DF92ED791A7AE4D659B5E21E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABA5C0F6293DBD50EDE2844367B45CE9;
+			remoteInfo = lwip;
+		};
+		B4F036ED8A00BB7F691BCE1A4B32D546 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E234CF548EFCDFF96C5C275476E4E37;
+			remoteInfo = "Pods-lwip_Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		070750B0817DAFC966701A660398C3EE /* sys.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sys.h; sourceTree = "<group>"; };
+		0A3A2EE5F574A08E24227A3E885B4B10 /* etharp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = etharp.h; sourceTree = "<group>"; };
+		0CDDB7AC004780B7CFE2891688DEA0EE /* inet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = inet.h; sourceTree = "<group>"; };
+		0ED2837E8DE4603C05115BBF73A48C03 /* snmp_msg.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = snmp_msg.h; sourceTree = "<group>"; };
+		1343C0AF22365FD354C4B5672D2292F9 /* netbuf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = netbuf.h; sourceTree = "<group>"; };
+		1359BA4859B9823D03D626B9F9758970 /* Pods-lwip_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-lwip_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		17E5AD9FBA5AC4C335B51E10749B8ECA /* cc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = cc.h; sourceTree = "<group>"; };
+		1CFE8A92F83041B9BDC8E42DA3460990 /* module.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = module.modulemap; sourceTree = "<group>"; };
+		1D3A657B2998272B72579FABB6DA00D5 /* lwip_include.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = lwip_include.framework; path = lwip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		219B1612A02625D5B5B88AD32AA5209B /* stats.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = stats.h; sourceTree = "<group>"; };
+		25543A0A16B8EE4D47817333B9605A01 /* netif.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = netif.h; sourceTree = "<group>"; };
+		262A7658E754777BDB7D6E0B7FA0B413 /* autoip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = autoip.h; sourceTree = "<group>"; };
+		27255CA2DE5B198AE16B38A70A4E3CCD /* sio.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sio.h; sourceTree = "<group>"; };
+		28AEB2E22E4306A544EE84BCCD4F8A8C /* opt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = opt.h; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		32A9D1C698076555C15CBB256402CE35 /* raw.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = raw.h; sourceTree = "<group>"; };
+		345D19746335E93E0DC7035B77746734 /* icmp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = icmp.h; sourceTree = "<group>"; };
+		349C94633E79F0B6A1308D32D3B285B2 /* inet_chksum.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = inet_chksum.h; sourceTree = "<group>"; };
+		356DDFB396919BB8FA75596C8E43D5A3 /* lwipopts.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = lwipopts.h; sourceTree = "<group>"; };
+		359ED4960E3B281D1E7A6D09DF560D05 /* pbuf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pbuf.h; sourceTree = "<group>"; };
+		38CF7BE0FC4953D97FA1333C6C8A4361 /* arch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = arch.h; sourceTree = "<group>"; };
+		3DB9483E7CE025AEDFA41E671561A70B /* Pods-lwip_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-lwip_Tests-umbrella.h"; sourceTree = "<group>"; };
+		42748876B3D322DD8E20F1C6CD1025C4 /* timers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = timers.h; sourceTree = "<group>"; };
+		4355BAFF84F0EA2126FC3204EA948F69 /* lwip-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "lwip-prefix.pch"; sourceTree = "<group>"; };
+		44614BFD7B24525ECA53AF66DFDA0240 /* Pods_lwip_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_lwip_Tests.framework; path = "Pods-lwip_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F79FC2D06DA0CDE8E2CBDFFB4EB6A97 /* ip_frag.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ip_frag.h; sourceTree = "<group>"; };
+		5052E60060F8CA1D62343B19EED2A400 /* Pods-lwip_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-lwip_Tests.modulemap"; sourceTree = "<group>"; };
+		5076558302291058585445B0333DCDEB /* debug.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = debug.h; sourceTree = "<group>"; };
+		5213EB43A62E0DDCD72D6DC3E500EE6C /* snmp_asn1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = snmp_asn1.h; sourceTree = "<group>"; };
+		57068E51B4C92C187497BB29DE149A43 /* ip_addr.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ip_addr.h; sourceTree = "<group>"; };
+		60F85E4D2E4BF734ED1F4A51728A3B7B /* perf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = perf.h; sourceTree = "<group>"; };
+		616FF0517A5E0A3E0DA841013DD22325 /* def.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = def.h; sourceTree = "<group>"; };
+		67F7663A245203F949C0B4C713B06DD3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		70C013B6D0185656DC0308AAB67EBE18 /* Pods-lwip_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-lwip_Example-umbrella.h"; sourceTree = "<group>"; };
+		72AA5ABDBCE354A01A57772A3CA18F5C /* snmp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = snmp.h; sourceTree = "<group>"; };
+		762DA3D3721BE6333A2283DB7737F6F1 /* api_msg.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = api_msg.h; sourceTree = "<group>"; };
+		7A4629ECF23A36B35551ECD1EAEC0E08 /* compat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = compat.h; sourceTree = "<group>"; };
+		80D59318610F8CED2846AD6182F92046 /* Pods-lwip_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-lwip_Tests-dummy.m"; sourceTree = "<group>"; };
+		834768ADC8841CBC68AF113DC9294064 /* lwip-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "lwip-Info.plist"; sourceTree = "<group>"; };
+		88465223C8231CBABF188FF28762BB7F /* lwip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = lwip.release.xcconfig; sourceTree = "<group>"; };
+		8B5F3FE43EC3A632444B8537BEE40800 /* Pods-lwip_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-lwip_Example.release.xcconfig"; sourceTree = "<group>"; };
+		8F35DD638D1490C57B17CFBE7EE89E25 /* snmp_structs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = snmp_structs.h; sourceTree = "<group>"; };
+		8FB49B1CE5F31B9B781D19DD0B31062E /* sockets.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sockets.h; sourceTree = "<group>"; };
+		94B5CCC15B3BC9B2093E1902BE4BA1CB /* Pods-lwip_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-lwip_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		96C479E75C145856B90F451E58B8F5B3 /* Pods-lwip_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-lwip_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		970342DEAEC76E036F02E9E8E1A6ACAF /* Pods-lwip_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-lwip_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		98DCB0966505231066174FB3BA7A4136 /* memp_std.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = memp_std.h; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9EC005E011D3B1C7960F2438C2B02B07 /* lwip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = lwip.h; sourceTree = "<group>"; };
+		9F771EB544BD0439C1013B2C58EDCD36 /* Pods-lwip_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-lwip_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		A3F074E44A1CB0DB07D3109B87B889C2 /* tcpip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = tcpip.h; sourceTree = "<group>"; };
+		A96357F0CB73D1B45E21248E52B6C915 /* lwip-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "lwip-dummy.m"; sourceTree = "<group>"; };
+		AA9A410767A9BC12C3291E986B1737C8 /* lwip.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = lwip.modulemap; sourceTree = "<group>"; };
+		B7B5A8075E7EFBD7BF7ED79C8AB0E6DB /* Pods_lwip_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_lwip_Example.framework; path = "Pods-lwip_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8EB6321669948279BC285F1FC10E48A /* dns.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = dns.h; sourceTree = "<group>"; };
+		BB238F4BDAFCA5F630B7D031E65B6AAC /* ppp_oe.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ppp_oe.h; sourceTree = "<group>"; };
+		C056A639B63EEB8BEA687AD579BF88EB /* lwip-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "lwip-umbrella.h"; sourceTree = "<group>"; };
+		C18EF76360E6708B84949565D1EB0E9A /* liblwip.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = liblwip.a; sourceTree = "<group>"; };
+		C51E08EB17FA2ED0D459692061E1E7D8 /* ip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ip.h; sourceTree = "<group>"; };
+		C55EA38698061D285642AF529644F921 /* memp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = memp.h; sourceTree = "<group>"; };
+		C8ABD266E0F47C3D49587FB6E4E498B7 /* dhcp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = dhcp.h; sourceTree = "<group>"; };
+		C8ED26C81FF10853DF82CD7643B6EBE8 /* tcp_impl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = tcp_impl.h; sourceTree = "<group>"; };
+		CB1492585E608F0CD2E9AD98AE028B08 /* Pods-lwip_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-lwip_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CB9006B03BCC02F58ED31CBFF8FFD6BC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		CC580EDF523EDF318BD68EE46AFEF86D /* mem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = mem.h; sourceTree = "<group>"; };
+		CCF92C437D26701163562192B3703B4A /* Pods-lwip_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-lwip_Example-frameworks.sh"; sourceTree = "<group>"; };
+		D299DD31081206F2D591B1CAF2D64224 /* Pods-lwip_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-lwip_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		D4888FB76C63702184ABB3C4F704329E /* sys_arch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = sys_arch.h; sourceTree = "<group>"; };
+		D4F03810F92ACCD5C5DD1608838D0644 /* igmp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = igmp.h; sourceTree = "<group>"; };
+		D79755D601F01DCB4EAFE12594CCAE1A /* Pods-lwip_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-lwip_Tests-Info.plist"; sourceTree = "<group>"; };
+		D91D0C0E2330C5D6CE27165B835F92E6 /* api.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = api.h; sourceTree = "<group>"; };
+		D97A8FBC7B04BD7C20E829223421C979 /* tcp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = tcp.h; sourceTree = "<group>"; };
+		DC213BEA5972FDC10C687953DC97ADFA /* lwip.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = lwip.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		DC6D0B95F05F7FB0D079043AB6DDA1F6 /* Pods-lwip_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-lwip_Example-dummy.m"; sourceTree = "<group>"; };
+		E3990DE0BD1B25AF60A8E47AED8EE54D /* netifapi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = netifapi.h; sourceTree = "<group>"; };
+		E4B72B0499D1F29F63584FE14B962CFE /* init.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = init.h; sourceTree = "<group>"; };
+		E76C9FA4FA7D60EA9095451CD5BB6096 /* lwip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = lwip.debug.xcconfig; sourceTree = "<group>"; };
+		EFA2C496A6F42D7EAB2047558173383D /* Pods-lwip_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-lwip_Example-Info.plist"; sourceTree = "<group>"; };
+		F03B3C3DF4535C9E7A10E358100CAA81 /* slipif.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = slipif.h; sourceTree = "<group>"; };
+		F7D4AAF9D675052BBFC0761B4F73AA4A /* Pods-lwip_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-lwip_Example.modulemap"; sourceTree = "<group>"; };
+		F80717A05EDDFC798143DB85568CC8AD /* netdb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = netdb.h; sourceTree = "<group>"; };
+		FC4C9BA7391B91B7EFC57D41A2CAEE8D /* err.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = err.h; sourceTree = "<group>"; };
+		FF15257DB3CE89470CCE9FF44D187595 /* udp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = udp.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3994D1770762CE487E23FF3FB4E1D961 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37F1B63AE2EB36018EA857FE5E12AFD2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6558C9228DD1E2C617246BA6448C50AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68F73EDD6266CCC3FF46769BAD15D21D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE92A34C32CF8A36CC54C2FE9ABB2863 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				373A1B0A1FDA42BB9B7D68FDAECDD53E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		085DD19092F202FCE91E42826349F9BC /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				67F7663A245203F949C0B4C713B06DD3 /* LICENSE */,
+				DC213BEA5972FDC10C687953DC97ADFA /* lwip.podspec */,
+				CB9006B03BCC02F58ED31CBFF8FFD6BC /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		19A817188A828B7CEB8B2F5874E42509 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				218C04E57BE33EF1B0356F1970F3F329 /* Pods-lwip_Example */,
+				E62EAAF211CB7B33771861E22CE550B0 /* Pods-lwip_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		1D21BF3E3F225C2E9DC28BFEB0F78C5B /* include */ = {
+			isa = PBXGroup;
+			children = (
+				7A4629ECF23A36B35551ECD1EAEC0E08 /* compat.h */,
+				9EC005E011D3B1C7960F2438C2B02B07 /* lwip.h */,
+				356DDFB396919BB8FA75596C8E43D5A3 /* lwipopts.h */,
+				1CFE8A92F83041B9BDC8E42DA3460990 /* module.modulemap */,
+				4BB5CA74D210121F7C110E3EC925C16C /* arch */,
+				466F2E8BD1DFFACF0A4E910975E2B19C /* lwip */,
+				B3BD747FBC564AB94138706FD3A042CD /* netif */,
+			);
+			name = include;
+			path = lwip/include;
+			sourceTree = "<group>";
+		};
+		218C04E57BE33EF1B0356F1970F3F329 /* Pods-lwip_Example */ = {
+			isa = PBXGroup;
+			children = (
+				F7D4AAF9D675052BBFC0761B4F73AA4A /* Pods-lwip_Example.modulemap */,
+				CB1492585E608F0CD2E9AD98AE028B08 /* Pods-lwip_Example-acknowledgements.markdown */,
+				970342DEAEC76E036F02E9E8E1A6ACAF /* Pods-lwip_Example-acknowledgements.plist */,
+				DC6D0B95F05F7FB0D079043AB6DDA1F6 /* Pods-lwip_Example-dummy.m */,
+				CCF92C437D26701163562192B3703B4A /* Pods-lwip_Example-frameworks.sh */,
+				EFA2C496A6F42D7EAB2047558173383D /* Pods-lwip_Example-Info.plist */,
+				70C013B6D0185656DC0308AAB67EBE18 /* Pods-lwip_Example-umbrella.h */,
+				D299DD31081206F2D591B1CAF2D64224 /* Pods-lwip_Example.debug.xcconfig */,
+				8B5F3FE43EC3A632444B8537BEE40800 /* Pods-lwip_Example.release.xcconfig */,
+			);
+			name = "Pods-lwip_Example";
+			path = "Target Support Files/Pods-lwip_Example";
+			sourceTree = "<group>";
+		};
+		466F2E8BD1DFFACF0A4E910975E2B19C /* lwip */ = {
+			isa = PBXGroup;
+			children = (
+				D91D0C0E2330C5D6CE27165B835F92E6 /* api.h */,
+				762DA3D3721BE6333A2283DB7737F6F1 /* api_msg.h */,
+				38CF7BE0FC4953D97FA1333C6C8A4361 /* arch.h */,
+				262A7658E754777BDB7D6E0B7FA0B413 /* autoip.h */,
+				5076558302291058585445B0333DCDEB /* debug.h */,
+				616FF0517A5E0A3E0DA841013DD22325 /* def.h */,
+				C8ABD266E0F47C3D49587FB6E4E498B7 /* dhcp.h */,
+				B8EB6321669948279BC285F1FC10E48A /* dns.h */,
+				FC4C9BA7391B91B7EFC57D41A2CAEE8D /* err.h */,
+				345D19746335E93E0DC7035B77746734 /* icmp.h */,
+				D4F03810F92ACCD5C5DD1608838D0644 /* igmp.h */,
+				0CDDB7AC004780B7CFE2891688DEA0EE /* inet.h */,
+				349C94633E79F0B6A1308D32D3B285B2 /* inet_chksum.h */,
+				E4B72B0499D1F29F63584FE14B962CFE /* init.h */,
+				C51E08EB17FA2ED0D459692061E1E7D8 /* ip.h */,
+				57068E51B4C92C187497BB29DE149A43 /* ip_addr.h */,
+				4F79FC2D06DA0CDE8E2CBDFFB4EB6A97 /* ip_frag.h */,
+				CC580EDF523EDF318BD68EE46AFEF86D /* mem.h */,
+				C55EA38698061D285642AF529644F921 /* memp.h */,
+				98DCB0966505231066174FB3BA7A4136 /* memp_std.h */,
+				1343C0AF22365FD354C4B5672D2292F9 /* netbuf.h */,
+				F80717A05EDDFC798143DB85568CC8AD /* netdb.h */,
+				25543A0A16B8EE4D47817333B9605A01 /* netif.h */,
+				E3990DE0BD1B25AF60A8E47AED8EE54D /* netifapi.h */,
+				28AEB2E22E4306A544EE84BCCD4F8A8C /* opt.h */,
+				359ED4960E3B281D1E7A6D09DF560D05 /* pbuf.h */,
+				32A9D1C698076555C15CBB256402CE35 /* raw.h */,
+				27255CA2DE5B198AE16B38A70A4E3CCD /* sio.h */,
+				72AA5ABDBCE354A01A57772A3CA18F5C /* snmp.h */,
+				5213EB43A62E0DDCD72D6DC3E500EE6C /* snmp_asn1.h */,
+				0ED2837E8DE4603C05115BBF73A48C03 /* snmp_msg.h */,
+				8F35DD638D1490C57B17CFBE7EE89E25 /* snmp_structs.h */,
+				8FB49B1CE5F31B9B781D19DD0B31062E /* sockets.h */,
+				219B1612A02625D5B5B88AD32AA5209B /* stats.h */,
+				070750B0817DAFC966701A660398C3EE /* sys.h */,
+				D97A8FBC7B04BD7C20E829223421C979 /* tcp.h */,
+				C8ED26C81FF10853DF82CD7643B6EBE8 /* tcp_impl.h */,
+				A3F074E44A1CB0DB07D3109B87B889C2 /* tcpip.h */,
+				42748876B3D322DD8E20F1C6CD1025C4 /* timers.h */,
+				FF15257DB3CE89470CCE9FF44D187595 /* udp.h */,
+			);
+			name = lwip;
+			path = lwip;
+			sourceTree = "<group>";
+		};
+		49E0483560755468A444BD472DF1F4CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D3A657B2998272B72579FABB6DA00D5 /* lwip_include.framework */,
+				B7B5A8075E7EFBD7BF7ED79C8AB0E6DB /* Pods_lwip_Example.framework */,
+				44614BFD7B24525ECA53AF66DFDA0240 /* Pods_lwip_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4BB5CA74D210121F7C110E3EC925C16C /* arch */ = {
+			isa = PBXGroup;
+			children = (
+				17E5AD9FBA5AC4C335B51E10749B8ECA /* cc.h */,
+				60F85E4D2E4BF734ED1F4A51728A3B7B /* perf.h */,
+				D4888FB76C63702184ABB3C4F704329E /* sys_arch.h */,
+			);
+			name = arch;
+			path = arch;
+			sourceTree = "<group>";
+		};
+		7FB12A5E33ED0E7CCCE28EECDE1D8BD5 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				C18EF76360E6708B84949565D1EB0E9A /* liblwip.a */,
+			);
+			name = lib;
+			path = lwip/lib;
+			sourceTree = "<group>";
+		};
+		9201140769691906E85F20F588876CEA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AA9A410767A9BC12C3291E986B1737C8 /* lwip.modulemap */,
+				A96357F0CB73D1B45E21248E52B6C915 /* lwip-dummy.m */,
+				834768ADC8841CBC68AF113DC9294064 /* lwip-Info.plist */,
+				4355BAFF84F0EA2126FC3204EA948F69 /* lwip-prefix.pch */,
+				C056A639B63EEB8BEA687AD579BF88EB /* lwip-umbrella.h */,
+				E76C9FA4FA7D60EA9095451CD5BB6096 /* lwip.debug.xcconfig */,
+				88465223C8231CBABF188FF28762BB7F /* lwip.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/lwip";
+			sourceTree = "<group>";
+		};
+		A47D4B9480A7B69FEAE07AAF11535DE6 /* lwip */ = {
+			isa = PBXGroup;
+			children = (
+				1D21BF3E3F225C2E9DC28BFEB0F78C5B /* include */,
+				7FB12A5E33ED0E7CCCE28EECDE1D8BD5 /* lib */,
+				085DD19092F202FCE91E42826349F9BC /* Pod */,
+				9201140769691906E85F20F588876CEA /* Support Files */,
+			);
+			name = lwip;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		B3BD747FBC564AB94138706FD3A042CD /* netif */ = {
+			isa = PBXGroup;
+			children = (
+				0A3A2EE5F574A08E24227A3E885B4B10 /* etharp.h */,
+				BB238F4BDAFCA5F630B7D031E65B6AAC /* ppp_oe.h */,
+				F03B3C3DF4535C9E7A10E358100CAA81 /* slipif.h */,
+			);
+			name = netif;
+			path = netif;
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				F70F26CBB776FBC828BFD68B263A0F4B /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				49E0483560755468A444BD472DF1F4CC /* Products */,
+				19A817188A828B7CEB8B2F5874E42509 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E62EAAF211CB7B33771861E22CE550B0 /* Pods-lwip_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5052E60060F8CA1D62343B19EED2A400 /* Pods-lwip_Tests.modulemap */,
+				96C479E75C145856B90F451E58B8F5B3 /* Pods-lwip_Tests-acknowledgements.markdown */,
+				9F771EB544BD0439C1013B2C58EDCD36 /* Pods-lwip_Tests-acknowledgements.plist */,
+				80D59318610F8CED2846AD6182F92046 /* Pods-lwip_Tests-dummy.m */,
+				D79755D601F01DCB4EAFE12594CCAE1A /* Pods-lwip_Tests-Info.plist */,
+				3DB9483E7CE025AEDFA41E671561A70B /* Pods-lwip_Tests-umbrella.h */,
+				1359BA4859B9823D03D626B9F9758970 /* Pods-lwip_Tests.debug.xcconfig */,
+				94B5CCC15B3BC9B2093E1902BE4BA1CB /* Pods-lwip_Tests.release.xcconfig */,
+			);
+			name = "Pods-lwip_Tests";
+			path = "Target Support Files/Pods-lwip_Tests";
+			sourceTree = "<group>";
+		};
+		F70F26CBB776FBC828BFD68B263A0F4B /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A47D4B9480A7B69FEAE07AAF11535DE6 /* lwip */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		716E59A4CDD4635F501D4374ED26A2D6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AC76CDF48D18AB6A9191F170379F653 /* Pods-lwip_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E379D41F1E3F7CA47C99B0206CA3BA97 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96D8C22695C92EFBE635C84FA7636E6A /* Pods-lwip_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4CEF77854A9285CCAC2C312DB879D6F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3C3C4FBA8B3247284D7A8387478F4A9 /* api.h in Headers */,
+				A96549EE46F455D905162A67585D56C0 /* api_msg.h in Headers */,
+				1A854E233EB684B7D213A5D4FCABC1E9 /* arch.h in Headers */,
+				30CACB849DB9622B42A604A6E72A34EC /* autoip.h in Headers */,
+				EA00ADAB9E7922A1B90713B8CF81EB20 /* cc.h in Headers */,
+				A140A217F16A851EE747443D7B16BA51 /* compat.h in Headers */,
+				9D7F7DD10707295B544D26AF11D94AD4 /* debug.h in Headers */,
+				832F72227062219AE61108823F9B65FA /* def.h in Headers */,
+				F62BBA8EA7CC3902482B36B81B210F2B /* dhcp.h in Headers */,
+				3A2965B4754B83ED86E66480F277242F /* dns.h in Headers */,
+				77D9B9420CBF8AC1F9B1B3C950744672 /* err.h in Headers */,
+				8CC54E43F4EA85B7E9C833CA6219C77B /* etharp.h in Headers */,
+				B1E1533B5BFF593436ABAD5DE168235F /* icmp.h in Headers */,
+				AF0EB3466E5EFD79B267DACF99CF96DC /* igmp.h in Headers */,
+				8B18EC78B0C6244B116AB1C3E1A2784E /* inet.h in Headers */,
+				32276E6ED89F60639814F9521C3AA92B /* inet_chksum.h in Headers */,
+				2A1D92B778C9F9F9FC3ADD6A62299544 /* init.h in Headers */,
+				681672172ABD111C25335987C2BF308A /* ip.h in Headers */,
+				084C87365C2BF9B9EAA17A32C408CCB4 /* ip_addr.h in Headers */,
+				BA9D35E13AC5DCE698655BE339743B1C /* ip_frag.h in Headers */,
+				F5E5CA4E39370C417132231547A065A6 /* lwip-umbrella.h in Headers */,
+				C0D8C4FDF06EC0DEBA37102CD745C5A4 /* lwip.h in Headers */,
+				13914E915A3C3034566041ADC7370A86 /* lwipopts.h in Headers */,
+				44834D13A58ADCD77BD377A1BEAA24EF /* mem.h in Headers */,
+				176E5A1A0A1F4B40C2EB55F3CAD41724 /* memp.h in Headers */,
+				597B109C09F4616969B204E9B4812A92 /* memp_std.h in Headers */,
+				CF80EA9303D85571798786969A16AE78 /* netbuf.h in Headers */,
+				5365A9C0FBDCEC0CB46282693A65CC1D /* netdb.h in Headers */,
+				466937F85CA05EDC360C31D39B9995A1 /* netif.h in Headers */,
+				A145A54B3B3C3C62B4175DE270806845 /* netifapi.h in Headers */,
+				A01C17E67474819E5E7EBF9DFACF02E9 /* opt.h in Headers */,
+				A17A10F7483AE7B889B5148DDAF8BED7 /* pbuf.h in Headers */,
+				2463D816208EC94FFA84A586B989989A /* perf.h in Headers */,
+				B9CD734F089D9C11B5FB66E3348969FC /* ppp_oe.h in Headers */,
+				2F512E48E27A35DD867D0E13302F6022 /* raw.h in Headers */,
+				3A2BDDE5E7FACB8D44874FB93752D807 /* sio.h in Headers */,
+				38BD6DB4935BD018AC2C3C31D5FF3966 /* slipif.h in Headers */,
+				B2A913FDDEEEE885550CFFD6870C4DED /* snmp.h in Headers */,
+				7A52BC4512CD5B83E24B92963FA03705 /* snmp_asn1.h in Headers */,
+				8B085F52D4DBD008D980B3B918C593C3 /* snmp_msg.h in Headers */,
+				269B25C35AD847C4369FC23F4DD753FC /* snmp_structs.h in Headers */,
+				002C5F1E3EAE17A0D2ED5DB5F4811568 /* sockets.h in Headers */,
+				EBF765679F9D1B3B10D6464A1A3AF235 /* stats.h in Headers */,
+				5CE70A23E36EE3F0E758B3773B8A3BBE /* sys.h in Headers */,
+				312A4CF4DD77008D4C81A471B96F6A48 /* sys_arch.h in Headers */,
+				A8118825A491470BABB8C2B92EC10366 /* tcp.h in Headers */,
+				389DF5D9D11F1A185259BF752FC8A84C /* tcp_impl.h in Headers */,
+				C9FAB35AF39F07A62B67D4D08A8B5CAC /* tcpip.h in Headers */,
+				DC6D44DE7E5C469BFD48B3C5E9CC87B3 /* timers.h in Headers */,
+				E912AE7DF0F8303C0D6BCF965C8115A7 /* udp.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8E234CF548EFCDFF96C5C275476E4E37 /* Pods-lwip_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A577BE69DD7B1F300A86C5E67219D27D /* Build configuration list for PBXNativeTarget "Pods-lwip_Example" */;
+			buildPhases = (
+				716E59A4CDD4635F501D4374ED26A2D6 /* Headers */,
+				9151DDB2D08640415533E1B7977F4508 /* Sources */,
+				3994D1770762CE487E23FF3FB4E1D961 /* Frameworks */,
+				D67A0CFE9B52D87666A84BCB5CAFBB41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18594A119B7DA7DAFE8757EA931E125C /* PBXTargetDependency */,
+			);
+			name = "Pods-lwip_Example";
+			productName = "Pods-lwip_Example";
+			productReference = B7B5A8075E7EFBD7BF7ED79C8AB0E6DB /* Pods_lwip_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		ABA5C0F6293DBD50EDE2844367B45CE9 /* lwip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3DD3ABAC10819B91391B84B70358663 /* Build configuration list for PBXNativeTarget "lwip" */;
+			buildPhases = (
+				E4CEF77854A9285CCAC2C312DB879D6F /* Headers */,
+				5CC2C17F2BA4001C56F8F080A26E0BCA /* Sources */,
+				6558C9228DD1E2C617246BA6448C50AD /* Frameworks */,
+				69650471A44E7378BF9345880953B127 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = lwip;
+			productName = lwip;
+			productReference = 1D3A657B2998272B72579FABB6DA00D5 /* lwip_include.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EA753469FFEBF65FF658E8D222D92A50 /* Pods-lwip_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B81A080ACA12DAB432029E7ECFD47410 /* Build configuration list for PBXNativeTarget "Pods-lwip_Tests" */;
+			buildPhases = (
+				E379D41F1E3F7CA47C99B0206CA3BA97 /* Headers */,
+				67D909ED6FBDCC32E2776F5DBED8F1C7 /* Sources */,
+				FE92A34C32CF8A36CC54C2FE9ABB2863 /* Frameworks */,
+				BA49303F2C06A1BCD338147557B12C0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D8065B2F3B47CFA69800FB82079E2639 /* PBXTargetDependency */,
+			);
+			name = "Pods-lwip_Tests";
+			productName = "Pods-lwip_Tests";
+			productReference = 44614BFD7B24525ECA53AF66DFDA0240 /* Pods_lwip_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 49E0483560755468A444BD472DF1F4CC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ABA5C0F6293DBD50EDE2844367B45CE9 /* lwip */,
+				8E234CF548EFCDFF96C5C275476E4E37 /* Pods-lwip_Example */,
+				EA753469FFEBF65FF658E8D222D92A50 /* Pods-lwip_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		69650471A44E7378BF9345880953B127 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA49303F2C06A1BCD338147557B12C0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D67A0CFE9B52D87666A84BCB5CAFBB41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5CC2C17F2BA4001C56F8F080A26E0BCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95B3D2F6FC0F6F40B79E8E170CD4767D /* liblwip.a in Sources */,
+				5192E2BE11DA386A6470FC0ADD872215 /* lwip-dummy.m in Sources */,
+				AE0E0FFBECE064962F7291DA299F0CEB /* module.modulemap in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67D909ED6FBDCC32E2776F5DBED8F1C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1191235EEF07A1C9671EE15446E89730 /* Pods-lwip_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9151DDB2D08640415533E1B7977F4508 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB1E84AF02C3F6ED1BD810C62DCC965B /* Pods-lwip_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		18594A119B7DA7DAFE8757EA931E125C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = lwip;
+			target = ABA5C0F6293DBD50EDE2844367B45CE9 /* lwip */;
+			targetProxy = 56C310C5DF92ED791A7AE4D659B5E21E /* PBXContainerItemProxy */;
+		};
+		D8065B2F3B47CFA69800FB82079E2639 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-lwip_Example";
+			target = 8E234CF548EFCDFF96C5C275476E4E37 /* Pods-lwip_Example */;
+			targetProxy = B4F036ED8A00BB7F691BCE1A4B32D546 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		07DCF9F72076E0E7EFD44832DD3927E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E76C9FA4FA7D60EA9095451CD5BB6096 /* lwip.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/lwip/lwip-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/lwip/lwip-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/lwip/lwip.modulemap";
+				PRODUCT_MODULE_NAME = lwip_include;
+				PRODUCT_NAME = lwip_include;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		196DFA3E4A09A28224918543529A1885 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		330E4D2C7079A1C25272FB82BDB52540 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88465223C8231CBABF188FF28762BB7F /* lwip.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/lwip/lwip-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/lwip/lwip-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/lwip/lwip.modulemap";
+				PRODUCT_MODULE_NAME = lwip_include;
+				PRODUCT_NAME = lwip_include;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8A3E45652A79FDE3CD2BC88AA57B354A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94B5CCC15B3BC9B2093E1902BE4BA1CB /* Pods-lwip_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-lwip_Tests/Pods-lwip_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-lwip_Tests/Pods-lwip_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8DC136877674E819DBCF228EF6F34B84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D299DD31081206F2D591B1CAF2D64224 /* Pods-lwip_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-lwip_Example/Pods-lwip_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-lwip_Example/Pods-lwip_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		98E5C67724FD9377E7D0737B2D8145AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B5F3FE43EC3A632444B8537BEE40800 /* Pods-lwip_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-lwip_Example/Pods-lwip_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-lwip_Example/Pods-lwip_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AEBC89107026EADB710736E9FBF3681D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1359BA4859B9823D03D626B9F9758970 /* Pods-lwip_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-lwip_Tests/Pods-lwip_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-lwip_Tests/Pods-lwip_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B01D14FDC83DCF9D4BE53066BEA96D05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				196DFA3E4A09A28224918543529A1885 /* Debug */,
+				B01D14FDC83DCF9D4BE53066BEA96D05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A577BE69DD7B1F300A86C5E67219D27D /* Build configuration list for PBXNativeTarget "Pods-lwip_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DC136877674E819DBCF228EF6F34B84 /* Debug */,
+				98E5C67724FD9377E7D0737B2D8145AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3DD3ABAC10819B91391B84B70358663 /* Build configuration list for PBXNativeTarget "lwip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07DCF9F72076E0E7EFD44832DD3927E6 /* Debug */,
+				330E4D2C7079A1C25272FB82BDB52540 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B81A080ACA12DAB432029E7ECFD47410 /* Build configuration list for PBXNativeTarget "Pods-lwip_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEBC89107026EADB710736E9FBF3681D /* Debug */,
+				8A3E45652A79FDE3CD2BC88AA57B354A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
