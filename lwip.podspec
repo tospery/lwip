@@ -30,7 +30,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'include/**/*.h'
+  s.source_files = 'lwip/include/**/*.h'
   s.vendored_libraries = 'lwip/lib/*.a'
 
   # s.header_dir = 'lwip/include'
