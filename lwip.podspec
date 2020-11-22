@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'lwip'
-  s.version          = '0.0.4'
+  s.version          = '0.0.5'
   s.summary          = 'A short description of lwip.'
 
 # This description is used to generate tags and improve search results.
@@ -28,11 +28,13 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/tospery/lwip.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
+  s.requires_arc = true
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'lwip/include/**/*'
-  s.vendored_libraries = 'lwip/liblwip.a'
-
+  s.source_files = 'lwip/**/*.{h,c}'
+  s.public_header_files = 'lwip/include/**/*.h'
+  
+  # s.vendored_libraries = 'lwip/liblwip.a'
   # s.header_dir = 'lwip/include'
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
