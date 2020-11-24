@@ -23,7 +23,7 @@
   "public_header_files": "lwip/include/**/*.h",
   "xcconfig": {
     "HEADER_SEARCH_PATHS": [
-      "${PODS_ROOT}/lwip/lwip/include"
+      "${SRCROOT}/lwip/include"
     ]
   }
 }
