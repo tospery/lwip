@@ -60,6 +60,6 @@
 #import "ppp_oe.h"
 #import "slipif.h"
 
-FOUNDATION_EXPORT double lwip_includeVersionNumber;
-FOUNDATION_EXPORT const unsigned char lwip_includeVersionString[];
+FOUNDATION_EXPORT double lwipVersionNumber;
+FOUNDATION_EXPORT const unsigned char lwipVersionString[];
 

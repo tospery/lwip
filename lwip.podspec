@@ -40,4 +40,10 @@ TODO: Add long description of the pod here.
   s.frameworks = 'UIKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 
+  s.xcconfig = { 
+      'HEADER_SEARCH_PATHS' => [
+          '${PODS_ROOT}/lwip/lwip/include'
+      ] 
+  }
+  
 end

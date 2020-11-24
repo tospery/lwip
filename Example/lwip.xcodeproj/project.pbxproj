@@ -349,11 +349,11 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-lwip_Example/Pods-lwip_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/lwip/lwip_include.framework",
+				"${BUILT_PRODUCTS_DIR}/lwip/lwip.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/lwip_include.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/lwip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

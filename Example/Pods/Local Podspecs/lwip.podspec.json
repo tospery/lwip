@@ -1,6 +1,6 @@
 {
   "name": "lwip",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "summary": "A short description of lwip.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/tospery/lwip",
@@ -13,11 +13,18 @@
   },
   "source": {
     "git": "https://github.com/tospery/lwip.git",
-    "tag": "0.0.1"
+    "tag": "0.0.5"
   },
+  "requires_arc": true,
   "platforms": {
     "ios": "10.0"
   },
-  "source_files": "lwip/**/*",
-  "header_dir": "lwip/include"
+  "source_files": "lwip/**/*.{h,c}",
+  "public_header_files": "lwip/include/**/*.h",
+  "frameworks": "UIKit",
+  "xcconfig": {
+    "HEADER_SEARCH_PATHS": [
+      "${PODS_ROOT}/lwip/lwip/include"
+    ]
+  }
 }

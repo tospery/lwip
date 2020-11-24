@@ -1,4 +1,4 @@
-framework module lwip_include {
+framework module lwip {
   umbrella header "lwip-umbrella.h"
 
   export *
