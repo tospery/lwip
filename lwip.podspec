@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'lwip'
-  s.version          = '0.0.5'
-  s.summary          = 'A short description of lwip.'
+  s.version          = '0.0.6'
+  s.summary          = 'A Lightweight TCP/IP stack.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+						A Lightweight TCP/IP stack.
                        DESC
 
   s.homepage         = 'https://github.com/tospery/lwip'
@@ -33,17 +33,17 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'lwip/**/*.{h,c}'
   s.public_header_files = 'lwip/include/**/*.h'
-  
-  # s.vendored_libraries = 'lwip/liblwip.a'
-  # s.header_dir = 'lwip/include'
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  s.frameworks = 'UIKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 
   s.xcconfig = { 
       'HEADER_SEARCH_PATHS' => [
           '${PODS_ROOT}/lwip/lwip/include'
       ] 
   }
+  
+  # s.frameworks = 'UIKit'
+  # s.vendored_libraries = 'lwip/liblwip.a'
+  # s.header_dir = 'lwip/include'
+  # s.public_header_files = 'Pod/Classes/**/*.h'
+  # s.dependency 'AFNetworking', '~> 2.3'
   
 end

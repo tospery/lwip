@@ -1,8 +1,8 @@
 {
   "name": "lwip",
-  "version": "0.0.5",
-  "summary": "A short description of lwip.",
-  "description": "TODO: Add long description of the pod here.",
+  "version": "0.0.6",
+  "summary": "A Lightweight TCP/IP stack.",
+  "description": "A Lightweight TCP/IP stack.",
   "homepage": "https://github.com/tospery/lwip",
   "license": {
     "type": "MIT",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/tospery/lwip.git",
-    "tag": "0.0.5"
+    "tag": "0.0.6"
   },
   "requires_arc": true,
   "platforms": {
@@ -21,7 +21,6 @@
   },
   "source_files": "lwip/**/*.{h,c}",
   "public_header_files": "lwip/include/**/*.h",
-  "frameworks": "UIKit",
   "xcconfig": {
     "HEADER_SEARCH_PATHS": [
       "${PODS_ROOT}/lwip/lwip/include"
