@@ -1,88 +1,95 @@
-/**
- * @file lwipopts.h
- * @author Ambroz Bizjak <ambrop7@gmail.com>
- * 
- * @section LICENSE
- * 
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- * 1. Redistributions of source code must retain the above copyright
- *    notice, this list of conditions and the following disclaimer.
- * 2. Redistributions in binary form must reproduce the above copyright
- *    notice, this list of conditions and the following disclaimer in the
- *    documentation and/or other materials provided with the distribution.
- * 3. Neither the name of the author nor the
- *    names of its contributors may be used to endorse or promote products
- *    derived from this software without specific prior written permission.
- * 
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
- * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
- * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- * DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
- * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
- * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
- * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
-
 #ifndef LWIP_CUSTOM_LWIPOPTS_H
 #define LWIP_CUSTOM_LWIPOPTS_H
 
-#define NO_SYS 1
-#define LWIP_TIMERS 0
-#define MEM_ALIGNMENT 4
+//  NO SYS
+#define NO_SYS                  1
+#define LWIP_TIMERS             0
 
-#define LWIP_ARP 0
-#define ARP_QUEUEING 0
-#define IP_FORWARD 0
-#define LWIP_ICMP 1
-#define LWIP_RAW 0
-#define LWIP_DHCP 0
-#define LWIP_AUTOIP 0
-#define LWIP_SNMP 0
-#define LWIP_IGMP 0
-#define LWIP_DNS 0
-#define LWIP_UDP 0
-#define LWIP_UDPLITE 0
-#define LWIP_TCP 1
-#define LWIP_CALLBACK_API 1
-#define LWIP_NETIF_API 0
-#define LWIP_NETIF_LOOPBACK 0
-#define LWIP_HAVE_LOOPIF 0
-#define LWIP_HAVE_SLIPIF 0
-#define LWIP_NETCONN 0
-#define LWIP_SOCKET 0
-#define PPP_SUPPORT 0
-#define LWIP_IPV6 1
-#define LWIP_IPV6_MLD 0
-#define LWIP_IPV6_AUTOCONFIG 0
+//  Core locking
+#define LWIP_TCPIP_CORE_LOCKING 0
+#define SYS_LIGHTWEIGHT_PROT    0
 
-#define MEMP_NUM_TCP_PCB_LISTEN 16
-#define MEMP_NUM_TCP_PCB 1024
-#define TCP_MSS 1460
-#define TCP_SND_BUF 16384
-#define TCP_SND_QUEUELEN (4 * (TCP_SND_BUF)/(TCP_MSS))
+//  Memory options
+#define MEM_LIBC_MALLOC         1
+#define MEMP_MEM_MALLOC         1
+/*
+ https://developer.apple.com/library/content/documentation/Performance/Conceptual/ManagingMemory/Articles/MemoryAlloc.html
+ */
+#define MEM_ALIGNMENT           16 /* or 8 ? uncertainly... */
 
-#define MEM_LIBC_MALLOC 1
-#define MEMP_MEM_MALLOC 1
+//  IP options
+#define IP_FRAG                 0
 
-#define LWIP_PERF 0
-#define SYS_LIGHTWEIGHT_PROT 0
-#define LWIP_DONT_PROVIDE_BYTEORDER_FUNCTIONS
+//  ARP options
+#define LWIP_ARP                0
 
-// needed on 64-bit systems, enable it always so that the same configuration
-// is used regardless of the platform
-#define IPV6_FRAG_COPYHEADER 1
+//  ICMP options
+#define LWIP_ICMP               0
+
+//  UDP options
+#define LWIP_UDP                0
+
+//  TCP options
+
+/**
+ * TCP_MSS: TCP Maximum segment size. (default is 536, a conservative default,
+ * you might want to increase this.)
+ * For the receive side, this MSS is advertised to the remote side
+ * when opening a connection. For the transmit size, this MSS sets
+ * an upper limit on the MSS advertised by the remote host.
+ */
+#ifndef TCP_MSS
+#define TCP_MSS                         1460
+#endif
+
+/**
+ * TCP_WND: The size of a TCP window.  This must be at least
+ * (2 * TCP_MSS) for things to work well
+ */
+#ifndef TCP_WND
+#define TCP_WND                         0xFFFF
+#endif
+
+/**
+ * TCP_SND_BUF: TCP sender buffer space (bytes).
+ * To achieve good performance, this should be at least 2 * TCP_MSS.
+ */
+#ifndef TCP_SND_BUF
+#define TCP_SND_BUF                     TCP_WND
+#endif
+
 
 /*
-#define LWIP_DEBUG 1
-#define IP_DEBUG LWIP_DBG_ON
-#define NETIF_DEBUG LWIP_DBG_ON
-#define TCP_DEBUG LWIP_DBG_ON
-#define TCP_INPUT_DEBUG LWIP_DBG_ON
-#define TCP_OUTPUT_DEBUG LWIP_DBG_ON
-*/
+ * `60`: max IP header length
+ * `60`: max TCP header length
+ */
+#define LWIP_EVENT_API          0
+#define LWIP_CALLBACK_API       1
 
-#endif
+//  LOOPIF options
+#define LWIP_NETIF_LOOPBACK     0
+
+//  Sequential layer options
+#define LWIP_NETCONN            0
+
+//  Socket options
+#define LWIP_SOCKET             0
+#define LWIP_TCP_KEEPALIVE      1
+
+//  Statistics options
+#define LWIP_STATS              0
+
+//  IPv6 options
+#define LWIP_IPV6               1
+
+//  PPP options
+#define PPP_SUPPORT             0
+
+//  Other
+#define LWIP_DONT_PROVIDE_BYTEORDER_FUNCTIONS
+
+//  Debug
+//#define LWIP_DEBUG              LWIP_DBG_ON
+//#define IP_DEBUG                LWIP_DBG_ON
+
+#endif /* LWIP_CUSTOM_LWIPOPTS_H */

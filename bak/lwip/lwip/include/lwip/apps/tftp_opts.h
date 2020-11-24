@@ -1,4 +1,4 @@
-/**
+/****************************************************************//**
  *
  * @file tftp_opts.h
  *
@@ -9,7 +9,7 @@
  * Copyright (c) Deltatee Enterprises Ltd. 2013
  * All rights reserved.
  *
- */
+ ********************************************************************/
 
 /* 
  * Redistribution and use in source and binary forms, with or without
@@ -42,7 +42,6 @@
 #define LWIP_HDR_APPS_TFTP_OPTS_H
 
 #include "lwip/opt.h"
-#include "lwip/prot/iana.h"
 
 /**
  * @defgroup tftp_opts Options
@@ -61,7 +60,7 @@
  * TFTP server port
  */
 #if !defined TFTP_PORT || defined __DOXYGEN__
-#define TFTP_PORT             LWIP_IANA_PORT_TFTP
+#define TFTP_PORT             69
 #endif
 
 /**

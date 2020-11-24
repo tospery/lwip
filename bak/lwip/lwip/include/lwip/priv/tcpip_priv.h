@@ -55,13 +55,12 @@ struct netif;
 #if LWIP_MPU_COMPATIBLE
 #define API_VAR_REF(name)               (*(name))
 #define API_VAR_DECLARE(type, name)     type * name
-#define API_VAR_ALLOC_EXT(type, pool, name, errorblock) do { \
+#define API_VAR_ALLOC(type, pool, name, errorval) do { \
                                           name = (type *)memp_malloc(pool); \
                                           if (name == NULL) { \
-                                            errorblock; \
+                                            return errorval; \
                                           } \
                                         } while(0)
-#define API_VAR_ALLOC(type, pool, name, errorval) API_VAR_ALLOC_EXT(type, pool, name, return errorval)
 #define API_VAR_ALLOC_POOL(type, pool, name, errorval) do { \
                                           name = (type *)LWIP_MEMPOOL_ALLOC(pool); \
                                           if (name == NULL) { \
@@ -82,7 +81,6 @@ struct netif;
 #else /* LWIP_MPU_COMPATIBLE */
 #define API_VAR_REF(name)               name
 #define API_VAR_DECLARE(type, name)     type name
-#define API_VAR_ALLOC_EXT(type, pool, name, errorblock)
 #define API_VAR_ALLOC(type, pool, name, errorval)
 #define API_VAR_ALLOC_POOL(type, pool, name, errorval)
 #define API_VAR_FREE(pool, name)

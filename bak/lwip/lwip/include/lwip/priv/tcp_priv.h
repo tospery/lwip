@@ -79,9 +79,7 @@ void             tcp_input   (struct pbuf *p, struct netif *inp);
 struct tcp_pcb * tcp_alloc   (u8_t prio);
 void             tcp_abandon (struct tcp_pcb *pcb, int reset);
 err_t            tcp_send_empty_ack(struct tcp_pcb *pcb);
-err_t            tcp_rexmit  (struct tcp_pcb *pcb);
-err_t            tcp_rexmit_rto_prepare(struct tcp_pcb *pcb);
-void             tcp_rexmit_rto_commit(struct tcp_pcb *pcb);
+void             tcp_rexmit  (struct tcp_pcb *pcb);
 void             tcp_rexmit_rto  (struct tcp_pcb *pcb);
 void             tcp_rexmit_fast (struct tcp_pcb *pcb);
 u32_t            tcp_update_rcv_ann_wnd(struct tcp_pcb *pcb);
@@ -266,7 +264,6 @@ struct tcp_seg {
 #define TF_SEG_DATA_CHECKSUMMED (u8_t)0x04U /* ALL data (not the header) is
                                                checksummed into 'chksum' */
 #define TF_SEG_OPTS_WND_SCALE   (u8_t)0x08U /* Include WND SCALE option */
-#define TF_SEG_OPTS_SACK_PERM   (u8_t)0x10U /* Include SACK Permitted option */
   struct tcp_hdr *tcphdr;  /* the TCP header */
 };
 
@@ -274,7 +271,6 @@ struct tcp_seg {
 #define LWIP_TCP_OPT_NOP        1
 #define LWIP_TCP_OPT_MSS        2
 #define LWIP_TCP_OPT_WS         3
-#define LWIP_TCP_OPT_SACK_PERM  4
 #define LWIP_TCP_OPT_TS         8
 
 #define LWIP_TCP_OPT_LEN_MSS    4
@@ -291,18 +287,10 @@ struct tcp_seg {
 #define LWIP_TCP_OPT_LEN_WS_OUT 0
 #endif
 
-#if LWIP_TCP_SACK_OUT
-#define LWIP_TCP_OPT_LEN_SACK_PERM     2
-#define LWIP_TCP_OPT_LEN_SACK_PERM_OUT 4 /* aligned for output (includes NOP padding) */
-#else
-#define LWIP_TCP_OPT_LEN_SACK_PERM_OUT 0
-#endif
-
 #define LWIP_TCP_OPT_LENGTH(flags) \
-  (flags & TF_SEG_OPTS_MSS       ? LWIP_TCP_OPT_LEN_MSS           : 0) + \
-  (flags & TF_SEG_OPTS_TS        ? LWIP_TCP_OPT_LEN_TS_OUT        : 0) + \
-  (flags & TF_SEG_OPTS_WND_SCALE ? LWIP_TCP_OPT_LEN_WS_OUT        : 0) + \
-  (flags & TF_SEG_OPTS_SACK_PERM ? LWIP_TCP_OPT_LEN_SACK_PERM_OUT : 0)
+  (flags & TF_SEG_OPTS_MSS       ? LWIP_TCP_OPT_LEN_MSS    : 0) + \
+  (flags & TF_SEG_OPTS_TS        ? LWIP_TCP_OPT_LEN_TS_OUT : 0) + \
+  (flags & TF_SEG_OPTS_WND_SCALE ? LWIP_TCP_OPT_LEN_WS_OUT : 0)
 
 /** This returns a TCP header option for MSS in an u32_t */
 #define TCP_BUILD_MSS_OPTION(mss) lwip_htonl(0x02040000 | ((mss) & 0xFFFF))
@@ -445,38 +433,45 @@ struct tcp_seg *tcp_seg_copy(struct tcp_seg *seg);
 #define tcp_ack(pcb)                               \
   do {                                             \
     if((pcb)->flags & TF_ACK_DELAY) {              \
-      tcp_clear_flags(pcb, TF_ACK_DELAY);          \
-      tcp_ack_now(pcb);                            \
+      (pcb)->flags &= ~TF_ACK_DELAY;               \
+      (pcb)->flags |= TF_ACK_NOW;                  \
     }                                              \
     else {                                         \
-      tcp_set_flags(pcb, TF_ACK_DELAY);            \
+      (pcb)->flags |= TF_ACK_DELAY;                \
     }                                              \
   } while (0)
 
 #define tcp_ack_now(pcb)                           \
-  tcp_set_flags(pcb, TF_ACK_NOW)
+  do {                                             \
+    (pcb)->flags |= TF_ACK_NOW;                    \
+  } while (0)
 
 err_t tcp_send_fin(struct tcp_pcb *pcb);
 err_t tcp_enqueue_flags(struct tcp_pcb *pcb, u8_t flags);
 
 void tcp_rexmit_seg(struct tcp_pcb *pcb, struct tcp_seg *seg);
 
-void tcp_rst(const struct tcp_pcb* pcb, u32_t seqno, u32_t ackno,
+void tcp_rst(u32_t seqno, u32_t ackno,
        const ip_addr_t *local_ip, const ip_addr_t *remote_ip,
        u16_t local_port, u16_t remote_port);
 
 u32_t tcp_next_iss(struct tcp_pcb *pcb);
 
 err_t tcp_keepalive(struct tcp_pcb *pcb);
-err_t tcp_split_unsent_seg(struct tcp_pcb *pcb, u16_t split);
 err_t tcp_zero_window_probe(struct tcp_pcb *pcb);
 void  tcp_trigger_input_pcb_close(void);
 
 #if TCP_CALCULATE_EFF_SEND_MSS
-u16_t tcp_eff_send_mss_netif(u16_t sendmss, struct netif *outif,
-                             const ip_addr_t *dest);
-#define tcp_eff_send_mss(sendmss, src, dest) \
-    tcp_eff_send_mss_netif(sendmss, ip_route(src, dest), dest)
+u16_t tcp_eff_send_mss_impl(u16_t sendmss, const ip_addr_t *dest
+#if LWIP_IPV6 || LWIP_IPV4_SRC_ROUTING
+                           , const ip_addr_t *src
+#endif /* LWIP_IPV6 || LWIP_IPV4_SRC_ROUTING */
+                           );
+#if LWIP_IPV6 || LWIP_IPV4_SRC_ROUTING
+#define tcp_eff_send_mss(sendmss, src, dest) tcp_eff_send_mss_impl(sendmss, dest, src)
+#else /* LWIP_IPV6 || LWIP_IPV4_SRC_ROUTING */
+#define tcp_eff_send_mss(sendmss, src, dest) tcp_eff_send_mss_impl(sendmss, dest)
+#endif /* LWIP_IPV6 || LWIP_IPV4_SRC_ROUTING */
 #endif /* TCP_CALCULATE_EFF_SEND_MSS */
 
 #if LWIP_CALLBACK_API
@@ -502,10 +497,6 @@ s16_t tcp_pcbs_sane(void);
 void tcp_timer_needed(void);
 
 void tcp_netif_ip_addr_changed(const ip_addr_t* old_addr, const ip_addr_t* new_addr);
-
-#if TCP_QUEUE_OOSEQ
-void tcp_free_ooseq(struct tcp_pcb *pcb);
-#endif
 
 #ifdef __cplusplus
 }

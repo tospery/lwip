@@ -5,9 +5,9 @@
 
 /*
  * Copyright (c) 2001-2004 Swedish Institute of Computer Science.
- * All rights reserved. 
- * 
- * Redistribution and use in source and binary forms, with or without modification, 
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without modification,
  * are permitted provided that the following conditions are met:
  *
  * 1. Redistributions of source code must retain the above copyright notice,
@@ -16,28 +16,26 @@
  *    this list of conditions and the following disclaimer in the documentation
  *    and/or other materials provided with the distribution.
  * 3. The name of the author may not be used to endorse or promote products
- *    derived from this software without specific prior written permission. 
+ *    derived from this software without specific prior written permission.
  *
- * THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR IMPLIED 
- * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF 
- * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT 
- * SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, 
- * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT 
- * OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
- * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN 
- * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING 
- * IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY 
+ * THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR IMPLIED
+ * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+ * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+ * SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+ * OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
+ * IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
  * OF SUCH DAMAGE.
  *
  * This file is part of the lwIP TCP/IP stack.
- * 
+ *
  * Author: Adam Dunkels <adam@sics.se>
  *
  */
 #ifndef LWIP_HDR_ARCH_H
 #define LWIP_HDR_ARCH_H
-
-#include "arch/cc.h"
 
 #ifndef LITTLE_ENDIAN
 #define LITTLE_ENDIAN 1234
@@ -46,6 +44,8 @@
 #ifndef BIG_ENDIAN
 #define BIG_ENDIAN 4321
 #endif
+
+#include "arch/cc.h"
 
 /**
  * @defgroup compiler_abstraction Compiler/platform abstraction
@@ -116,20 +116,12 @@
 /* Define generic types used in lwIP */
 #if !LWIP_NO_STDINT_H
 #include <stdint.h>
-/* stdint.h is C99 which should also provide support for 64-bit integers */
-#if !defined(LWIP_HAVE_INT64) && defined(UINT64_MAX)
-#define LWIP_HAVE_INT64 1
-#endif
 typedef uint8_t   u8_t;
 typedef int8_t    s8_t;
 typedef uint16_t  u16_t;
 typedef int16_t   s16_t;
 typedef uint32_t  u32_t;
 typedef int32_t   s32_t;
-#if LWIP_HAVE_INT64
-typedef uint64_t  u64_t;
-typedef int64_t   s64_t;
-#endif
 typedef uintptr_t mem_ptr_t;
 #endif
 
@@ -172,7 +164,7 @@ typedef uintptr_t mem_ptr_t;
 
 /** Define this to 1 in arch/cc.h of your port if your compiler does not provide
  * the limits.h header. You need to define the type limits yourself in this case
- * (e.g. INT_MAX, SSIZE_MAX).
+ * (e.g. INT_MAX).
  */
 #ifndef LWIP_NO_LIMITS_H
 #define LWIP_NO_LIMITS_H 0
@@ -182,24 +174,6 @@ typedef uintptr_t mem_ptr_t;
 #if !LWIP_NO_LIMITS_H
 #include <limits.h>
 #endif
-
-/* Do we need to define ssize_t? This is a compatibility hack:
- * Unfortunately, this type seems to be unavailable on some systems (even if
- * sys/types or unistd.h are available).
- * Being like that, we define it to 'int' if SSIZE_MAX is not defined.
- */
-#ifdef SSIZE_MAX
-/* If SSIZE_MAX is defined, unistd.h should provide the type as well */
-#ifndef LWIP_NO_UNISTD_H
-#define LWIP_NO_UNISTD_H 0
-#endif
-#if !LWIP_NO_UNISTD_H
-#include <unistd.h>
-#endif
-#else /* SSIZE_MAX */
-typedef int ssize_t;
-#define SSIZE_MAX INT_MAX
-#endif /* SSIZE_MAX */
 
 /** C++ const_cast<target_type>(val) equivalent to remove constness from a value (GCC -Wcast-qual) */
 #ifndef LWIP_CONST_CAST
@@ -317,7 +291,7 @@ extern "C" {
 #define PACK_STRUCT_FLD_S(x) PACK_STRUCT_FIELD(x)
 #endif /* PACK_STRUCT_FLD_S */
 
-/** PACK_STRUCT_USE_INCLUDES==1: Packed structs support using \#include files before and after struct to be packed.\n
+/** Packed structs support using \#include files before and after struct to be packed.\n
  * The file included BEFORE the struct is "arch/bpstruct.h".\n
  * The file included AFTER the struct is "arch/epstruct.h".\n
  * This can be used to implement struct packing on MS Visual C compilers, see
@@ -332,16 +306,7 @@ extern "C" {
 /** Eliminates compiler warning about unused arguments (GCC -Wextra -Wunused). */
 #ifndef LWIP_UNUSED_ARG
 #define LWIP_UNUSED_ARG(x) (void)x
-#endif /* LWIP_UNUSED_ARG */ 
-
-/** LWIP_PROVIDE_ERRNO==1: Let lwIP provide ERRNO values and the 'errno' variable.
- * If this is disabled, cc.h must either define 'errno', include <errno.h>,
- * define LWIP_ERRNO_STDINCLUDE to get <errno.h> included or
- * define LWIP_ERRNO_INCLUDE to <errno.h> or equivalent.
- */
-#if defined __DOXYGEN__
-#define LWIP_PROVIDE_ERRNO
-#endif
+#endif /* LWIP_UNUSED_ARG */
 
 /**
  * @}

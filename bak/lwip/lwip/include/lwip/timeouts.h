@@ -71,10 +71,8 @@ struct lwip_cyclic_timer {
 };
 
 /** This array contains all stack-internal cyclic timers. To get the number of
- * timers, use lwip_num_cyclic_timers */
+ * timers, use LWIP_ARRAYSIZE() */
 extern const struct lwip_cyclic_timer lwip_cyclic_timers[];
-/** Array size of lwip_cyclic_timers[] */
-extern const int lwip_num_cyclic_timers;
 
 #if LWIP_TIMERS
 

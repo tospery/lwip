@@ -42,7 +42,6 @@
 #define LWIP_HDR_APPS_HTTPD_OPTS_H
 
 #include "lwip/opt.h"
-#include "lwip/prot/iana.h"
 
 /**
  * @defgroup httpd_opts Options
@@ -130,17 +129,7 @@
 
 /** The server port for HTTPD to use */
 #if !defined HTTPD_SERVER_PORT || defined __DOXYGEN__
-#define HTTPD_SERVER_PORT                   LWIP_IANA_PORT_HTTP
-#endif
-
-/** The https server port for HTTPD to use */
-#if !defined HTTPD_SERVER_PORT_HTTPS || defined __DOXYGEN__
-#define HTTPD_SERVER_PORT_HTTPS             LWIP_IANA_PORT_HTTPS
-#endif
-
-/** Enable https support? */
-#if !defined HTTPD_ENABLE_HTTPS || defined __DOXYGEN__
-#define HTTPD_ENABLE_HTTPS                  0
+#define HTTPD_SERVER_PORT                   80
 #endif
 
 /** Maximum retries before the connection is aborted/closed.
@@ -272,11 +261,10 @@
 #endif
 
 /* Define this to a function that returns the maximum amount of data to enqueue.
-   The function have this signature: u16_t fn(struct altcp_pcb* pcb);
-   The best place to define this is the hooks file (@see LWIP_HOOK_FILENAME) */
+   The function have this signature: u16_t fn(struct tcp_pcb* pcb); */
 #if !defined HTTPD_MAX_WRITE_LEN || defined __DOXYGEN__
 #if HTTPD_LIMIT_SENDING_TO_2MSS
-#define HTTPD_MAX_WRITE_LEN(pcb)    ((u16_t)(2 * altcp_mss(pcb)))
+#define HTTPD_MAX_WRITE_LEN(pcb)    (2 * tcp_mss(pcb))
 #endif
 #endif
 
@@ -322,14 +310,10 @@
 #define LWIP_HTTPD_FS_ASYNC_READ      0
 #endif
 
-/** Filename (including path) to use as FS data file */
-#if !defined HTTPD_FSDATA_FILE || defined __DOXYGEN__
-/* HTTPD_USE_CUSTOM_FSDATA: Compatibility with deprecated lwIP option */
-#if defined(HTTPD_USE_CUSTOM_FSDATA) && (HTTPD_USE_CUSTOM_FSDATA != 0)
-#define HTTPD_FSDATA_FILE "fsdata_custom.c"
-#else
-#define HTTPD_FSDATA_FILE "fsdata.c"
-#endif
+/** Set this to 1 to include "fsdata_custom.c" instead of "fsdata.c" for the
+ * file system (to prevent changing the file included in CVS) */
+#if !defined HTTPD_USE_CUSTOM_FSDATA || defined __DOXYGEN__
+#define HTTPD_USE_CUSTOM_FSDATA 0
 #endif
 
 /**

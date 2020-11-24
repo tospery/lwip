@@ -228,10 +228,6 @@ void httpd_post_data_recved(void *connection, u16_t recved_len);
 
 void httpd_init(void);
 
-#if HTTPD_ENABLE_HTTPS
-struct altcp_tls_config;
-void httpd_inits(struct altcp_tls_config *conf);
-#endif
 
 #ifdef __cplusplus
 }
